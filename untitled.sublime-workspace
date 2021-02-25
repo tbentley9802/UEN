@@ -1,0 +1,369 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"se",
+				"selected"
+			],
+			[
+				"re",
+				"required\tAttr"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 3556,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n\n<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-us\" xml:lang=\"en-us\" >\n<head>\n<title>Pexip Infinity</title>\n<link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\" />\n<meta name=\"robots\" content=\"noindex, nofollow\" />\n<script type=\"text/javascript\" src=\"https://tbentley-lab-conf01a.bentley-labs.com/static/webrtc/js/pexrtc.js\"></script>\n<script type=\"text/javascript\" src=\"webui.js\"></script>\n<script type='text/javascript'>\nwindow.onload = function()\n{\n    var url = window.location.href;\n    var params = url.substr(url.indexOf(\"?\")+1).split(\"&\");\n    var i;\n    var qp = {};\n    for (i=0;i<params.length;i++) {\n        var kv = params[i].split(\"=\");\n        qp[kv[0]] = kv[1];\n    }\n    console.log(qp);\n\n    var source = \"\";\n    if (\"join_pres\" in qp) {\n        source = \"screen\";\n    }\n\n    //pin, source\n    initialise(\"tbentley-lab-conf01a.bentley-labs.com\", \"proxy\", qp['bandwidth'], qp['name'], \"\", source);\n}\n</script>\n\n<meta name=\"robots\" content=\"NONE,NOARCHIVE\" />\n</head>\n\n<body>\n\n<!-- Container -->\n<div id=\"container\" class=\"site\">\n    <!-- Header -->\n    <header id=\"header\" class=\"branding\" role=\"banner\">\n        \n        <img src=\"img/logo.jpg\" alt=\"Pexip\">\n        <h1>Infinity</h1>\n        \n    </header>\n    <!-- END Header -->\n\n    <!-- Content -->\n\n  <div id=\"selectrole\" class=\"main site join hidden\">\n    <h2>Select your role for this conference:</h2>\n    <form>\n        <div class=\"cf\">\n            <input type=\"radio\" value=\"1\" name=\"role\" id=\"id_guest\" class=\"webrtcinput\" checked>\n            <label for=\"id_guest\">Guest</label>\n        </div>\n        <div class=\"cf\">\n            <input type=\"radio\" value=\"2\" name=\"role\" id=\"id_host\" class=\"webrtcinput\">\n            <label for=\"id_host\">Host</label>\n        </div>\n\n        <input type=\"button\" value=\"Join Conference\" name=\"join\" id=\"id_join\" class=\"webrtcbutton\" onClick=\"submitSelectRole();\">\n    </form>\n  </div>\n\n\n  <div id=\"pinentry\" class=\"main site join hidden\">\n    <form onSubmit=\"return submitPinEntry();\">\n        <label for=\"id_pin\" class=\"vh\">Enter the conference PIN</label>\n        <input type=\"password\" value=\"\" name=\"pin\" id=\"id_pin\" placeholder=\"Enter the conference PIN\" required class=\"webrtcinput\">\n\n        <input type=\"button\" value=\"Join Conference\" name=\"join\" id=\"id_join\" class=\"webrtcbutton\" onClick=\"submitPinEntry();\">\n    </form>\n  </div>\n\n\n  <div id=\"ivrentry\" class=\"main site join hidden\">\n    <form onSubmit=\"return submitIVREntry();\">\n        <label for=\"id_room\" class=\"vh\">Enter the target extension</label>\n        <input type=\"text\" value=\"\" name=\"room\" id=\"id_room\" placeholder=\"Enter the SIP Address you want to call\" required class=\"webrtcinput\">\n\n        <input type=\"button\" value=\"Join Conference\" name=\"join\" id=\"id_join\" class=\"webrtcbutton\" onClick=\"submitIVREntry();\">\n    </form>\n  </div>\n\n \n  <div id=\"maincontent\" class=\"main cf hidden\">\n    <section class=\"top\">\n      <aside class=\"participants\"><!-- List of participants -->\n        <h2 id=\"rosterheading\">Participants</h2>\n        <div id=\"rosterlist\" class=\"rosterlist\">\n          <ul id=\"rosterul\">\n          </ul>\n        </div>\n        <div id=\"selfview\" class=\"selfview\" hidden>\n          <video id=\"selfvideo\" autoplay=\"autoplay\" playsinline=\"playsinline\" muted=\"true\">\n          </video>\n        </div>\n      </aside>\n      <div id=\"videocontainer\" class=\"videocontainer\">\n        <video width=\"100%\" height=\"100%\" id=\"video\" autoplay=\"autoplay\" playsinline=\"playsinline\" poster=\"img/spinner.gif\"></video>\n      </div>\n    </section>\n\n    <footer id=\"controls\" class=\"controls cf\">\n      <ul>\n        <li><a id=\"id_selfview\" class=\"webrtcbutton btn-selfview\" onclick=\"toggleSelfview();\">Show Selfview</a></li>\n        <li><a id=\"id_muteaudio\" class=\"webrtcbutton btn-audio\" onclick=\"muteAudioStreams();\">Mute Audio</a></li>\n        <li><a id=\"id_mutevideo\" class=\"webrtcbutton btn-video\" onclick=\"muteVideoStreams();\">Mute Video</a></li>\n        <li><a id=\"id_fullscreen\" class=\"webrtcbutton btn-fullscreen inactive\" onclick=\"goFullscreen();\">Fullscreen</a></li>\n        <li><a id=\"id_screenshare\" class=\"webrtcbutton btn-presentscreen inactive\" onclick=\"presentScreen();\">Present Screen</a></li>\n        <li><a id=\"id_presentation\" class=\"webrtcbutton btn-presentation inactive\" onclick=\"togglePresentation();\">No Presentation Active</a></li>\n        <li><a id=\"id_disconnect\" class=\"webrtcbutton btn-disconnect\" onclick=\"window.location='index.html';\">Disconnect</a></li>\n      </ul>\n    </footer>\n  </div>\n\n    <!-- END Content -->\n\n    <div id=\"footer\"> </div>\n</div>\n<!-- END Container -->\n\n</body>\n</html>\n",
+			"settings":
+			{
+				"buffer_size": 4729,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "conference.html",
+			"settings":
+			{
+				"buffer_size": 4718,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "conference-flash.html",
+			"settings":
+			{
+				"buffer_size": 5163,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/terry.bentley/Desktop/UEN/conference.html",
+		"/Users/terry.bentley/Desktop/UEN/conference-flash.html",
+		"/Users/terry.bentley/Desktop/UEN/style.css",
+		"/Users/terry.bentley/Desktop/UEN/index.html",
+		"/Users/terry.bentley/Desktop/Utah Educaton/conference-flash.html",
+		"/Users/terry.bentley/Desktop/Utah Educaton/conference.html",
+		"/Users/terry.bentley/Desktop/Utah Educaton/style.css",
+		"/Users/terry.bentley/Desktop/Utah Educaton/index.html",
+		"/Users/terry.bentley/Desktop/SIP Invite",
+		"/Users/terry.bentley/Desktop/SIP Auth",
+		"/Users/terry.bentley/Desktop/pexrtc/conference.html",
+		"/Users/terry.bentley/Desktop/pexrtc/index.html",
+		"/Users/terry.bentley/Desktop/pexrtcdemo/index.html",
+		"/Users/terry.bentley/Desktop/pexrtcdemo/webui.js",
+		"/Users/terry.bentley/Desktop/quickhits/index.html",
+		"/Users/terry.bentley/Desktop/bespoke/api-integrations/client/pexrtc-js-demos/webrtc-site-v18/index.html",
+		"/Users/terry.bentley/Downloads/Default.html",
+		"/Users/terry.bentley/Desktop/bespoke/api-integrations/client/pexrtc-js-demos/webrtc-site-v18/webui.js",
+		"/Users/terry.bentley/Desktop/bespoke/api-integrations/client/pexrtc-js-demos/webrtc-site-v18/conference.html",
+		"/Users/terry.bentley/Desktop/web_stuff/conference.html",
+		"/Users/terry.bentley/Desktop/web_stuff/index.html",
+		"/Users/terry.bentley/Downloads/CS Video (5)/manifest.json",
+		"/Users/terry.bentley/.ssh/id_rsa.pub",
+		"/Users/terry.bentley/.ssh/pex-labs-pcaas-mgr01.pub",
+		"/Users/terry.bentley/.ssh/PCaas/mgr/id_rsa.pub",
+		"/Users/terry.bentley/Desktop/PCaaS SSH Key/id_rsa.pub",
+		"/Users/terry.bentley/keyfile.ppk",
+		"/Users/terry.bentley/Downloads/diagnostic_snapshot_tbentley-lab-mgr01_20_10_15_18_16_21/var/log/unified_support.log",
+		"/Users/terry.bentley/Downloads/diagnostic_snapshot_tbentley-lab-mgr01_20_10_15_18_16_21/var/log/parsed/pex_report_logreader.log",
+		"/Users/terry.bentley/Desktop/vmr_build.py",
+		"/Users/terry.bentley/Library/Mobile Documents/com~apple~CloudDocs/pexip-otj-291721-310c74932c0d.json",
+		"/Users/terry.bentley/Desktop/test.py",
+		"/Users/terry.bentley/Desktop/webex_ips.txt",
+		"/Users/terry.bentley/Downloads/SEP123456789012.cnf.xml.sgn",
+		"/Users/terry.bentley/Downloads/SEP123456789012.cnf.xml",
+		"/Users/terry.bentley/Desktop/SEPMAC.cnf.xml",
+		"/Users/terry.bentley/Desktop/Zoom.txt",
+		"/Users/terry.bentley/Desktop/pin.py",
+		"/Users/terry.bentley/Downloads/pex-supportlog.tmLanguage",
+		"/private/var/folders/cy/n73pn7jj1_1_tz0p5x89xtsh0000gn/T/9c87b9ed-352f-4af7-abe8-a4450682af1a/tftpboot/SEP001FCA36D912.cnf.xml",
+		"/Users/terry.bentley/Desktop/SEP001FCA36D912.cnf.xml",
+		"/Users/terry.bentley/Downloads/diagnostic_snapshot_tbentley-lab-mgr01_20_08_19_21_02_46/var/log/unified_support.log",
+		"/Users/terry.bentley/Library/Mobile Documents/com~apple~CloudDocs/MagicalSandbox/updatePhone.py",
+		"/Users/terry.bentley/Library/Mobile Documents/com~apple~CloudDocs/Azure_Import.ps",
+		"/Users/terry.bentley/Library/Mobile Documents/com~apple~CloudDocs/MagicalSandbox/AddMiniBVC.py"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3556,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4729,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								4729
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "conference.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4718,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								4718
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "conference-flash.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5163,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "untitled.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 369.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
