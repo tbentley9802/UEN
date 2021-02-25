@@ -3,7 +3,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" xml:lang="en-us" >
 <head>
-<title>Pexip Infinity</title>
+<title>Utah Education Network</title>
 <link rel="stylesheet" type="text/css" href="style.css" />
 <meta name="robots" content="noindex, nofollow" />
 <script type='text/javascript'>
@@ -70,7 +70,7 @@ window.onload = function()
     <header id="header" class="branding" role="banner">
         
         <img src="img/UEN_logo.png" alt="UEN">
-        <h1>Infinity</h1>
+        <h1>Utah Education Network</h1>
         
     </header>
     <!-- END Header -->
@@ -80,16 +80,14 @@ window.onload = function()
   <div id="maincontent" class="main site join">
     <form id="id_form" action="conference.html" method="get">
         <label for="id_alias" class="vh">Enter the conference alias</label>
-        <input type="text" value="" name="alias" id="id_alias" placeholder="Enter the conference alias" required class="webrtcinput">
+        <input type="text" value="" name="alias" id="id_alias" placeholder="Enter the Instructors Name" required class="webrtcinput">
 
         <label for="id_name" class="vh">Enter your name</label>
         <input type="text" value="" name="name" id="id_name" placeholder="Enter your name" required class="webrtcinput">
 
         <select name="bandwidth" class="webrtcinput" id="id_bandwidth">
-            <option value="1920">Maximum Bandwidth (1920kbps)</option>
-            <option value="1280" selected>High Bandwidth (1280kbps)</option>
-            <option value="576">Medium Bandwidth (576kbps)</option>
-            <option value="192">Low Bandwidth (192kbps)</option>
+            <option value="4096" selected>Full HD (4096kbps)</option>
+            <option value="2048">HD (2048kbps)</option>
         </select>
 
         <input type="submit" value="Join Conference" name="join" id="id_join" class="webrtcbutton">
